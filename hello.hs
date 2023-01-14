@@ -24,6 +24,6 @@ textFromPtr = fmap E.decodeUtf8 . unsafePackCString
 hello :: Ptr CChar -> IO ()
 hello ptr = ("Hello, " <>) <$> input >>= print 
   where
-    input = if ptr == nullPtr then pure "" else textFromPtr ptr
+    input = if ptr == nullPtr then mempty else textFromPtr ptr
 
 main = undefined
