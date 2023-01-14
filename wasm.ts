@@ -20,4 +20,5 @@ const buf = encoder.encode('Vampire!');
 const ptr = instance.exports.mallocBytes(buf.length);
 mem.set(buf, ptr);
 
+// will print Hello, <name> in the console
 instance.exports.hello(ptr);
