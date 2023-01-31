@@ -7,7 +7,7 @@ const context = new WasiContext({});
 const encoder = new TextEncoder("utf-8");
 
 const instance = (
-  await WebAssembly.instantiate(fs.readFileSync("hello.wasm"), {
+  await WebAssembly.instantiate(fs.readFileSync("hello_1.wasm"), {
     wasi_snapshot_preview1: context.exports,
   })
 ).instance;
